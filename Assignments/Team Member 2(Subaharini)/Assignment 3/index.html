@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Forked from a template on Tutorialzine: https://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox -->
+  <header>
+    <h2><a href="#">Customer Care Registory</a></h2>
+    <nav>
+   
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="background-image"></div>
+    <div class="hero-content-area">
+      <h1>Customer Care Registory</h1>
+      <h3>Tell your problem we will quick solve it</h3>
+      <a href="#" class="btn">Contact Us Now</a>
+    </div>
+  </section>
+
+
+
+</body>
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "9167fb91-f51e-49bc-9845-d1a925946b54", // The ID of this integration.
+      region: "jp-tok", // The region your integration is hosted in.
+      serviceInstanceID: "61644cb2-75a6-49e3-857e-97e947c8c678", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</html>
