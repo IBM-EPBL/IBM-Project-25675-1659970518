@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/cooltipz-css/cooltipz.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-icon.png" />
+    <title>Customer registry</title>
+</head>
+<body>
+    <div class="signup-page" id="logo-section">
+        <div class="logo-section">
+          <div class="logo">
+            <i class="fa fa-light fa-clipboard-list logo-icon"></i>
+            Customer care registry App
+          </div>
+        </div>
+        <div class="signup-box hide-signup" id="signup-page">
+          <div id="snackbar" class="snackbar">
+            User Already Exists.. Try Signingup with another E-Mail
+            <button class="snackbar-close" id="snackbar-close">X</button>
+          </div>
+          <h1 class="sign-up">Sign Up</h1>
+          <h4 class="sign-up slogan">
+            It's completely free and takes only a minute
+          </h4>
+          <div class="signup-form">
+            <label for="username" class="user-details">Name</label>
+            <input
+              type="text"
+              placeholder=""
+              id="username"
+              class="form-input"
+              minlength="5"
+              maxlength="15"
+              spellcheck="false"
+            />
+            <label for="user-email" class="user-details">E-Mail </label>
+            <input
+              type="email"
+              placeholder=""
+              id="user-email"
+              class="form-input"
+              spellcheck="false"
+            />
+            <label for="user-types" class="user-details user-type"
+              >User Type</label
+            >
+            <div class="user-type-box">
+              <div class="form-input custom-select" id="user-types-box">
+                <p id="user-types">Select User Type...</p>
+                <p>
+                  <i class="fa fa-sharp fa-solid fa-sort-down"></i>
+                </p>
+              </div>
+              <div>
+                <ul class="user-type-options" id="user-type-options">
+                  <li class="options" onclick="writeToSelect('Student')">
+                    Student
+                  </li>
+                  <li class="options" onclick="writeToSelect('Professional')">
+                    Professional
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <label for="password" class="user-details">Password </label>
+            <div class="password-container">
+              <input
+                type="password"
+                placeholder=""
+                id="password"
+                class="form-input password-field"
+                minlength="8"
+                maxlength="15"
+                autocomplete="off"
+                onclick="passwordValidation()"
+              /><i class="fa fa-eye eye-button" id="password-eye"></i>
+            </div>
+            <div class="password-requirement">
+              Password Requirements :
+              <ul>
+                <li>Minimum 8 and Maximum 15 characters</li>
+                <li>Atleast 1 special character,1 alphabet,1 number</li>
+              </ul>
+            </div>
+            <label for="confirm-password" class="user-details"
+              >Confirm Password
+            </label>
+            <div class="password-container">
+              <input
+                type="password"
+                placeholder=""
+                id="confirm-password"
+                class="form-input password-field"
+                minlength="8"
+                maxlength="15"
+                autocomplete="off"
+                onclick="passwordValidation()"
+              />
+              <i
+                class="fa fa-eye eye-button"
+                id="confirm-password-eye"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+          <div class="mandatory-message">* Mandatory fields</div>
+          <input
+            type="Submit"
+            value="Sign Up"
+            class="signup-button"
+            id="signup-button"
+            onclick="signupValidation()"
+          />
+          <p class="user-login">
+            Already have an account ?
+            <a class="user-login-redirect" onclick="redirectLoginPage()"
+              >Login Here</a
+            >
+          </p>
+        </div>
+        <div class="signup-box login-box" id="login-page">
+          <div id="login-snackbar" class="snackbar">
+            SignUp successful. Login to Continue
+            <button class="snackbar-close" id="login-snackbar-close">X</button>
+          </div>
+          <div id="login-snackbar-failed" class="snackbar">
+            Invalid Credentials. Please check email or Password
+            <button class="snackbar-close" id="login-snackbar-failed-close">
+              X
+            </button>
+          </div>
+          <div id="login-snackbar-notfound" class="snackbar login-wrong-snackbar">
+            User Not Found.. SignUp to continue
+            <button class="snackbar-close" id="login-snackbar-failed-notfound">
+              X
+            </button>
+          </div>
+          <h1 class="sign-up">Login</h1>
+         
+      </div>
+</body>
+</html>
+
